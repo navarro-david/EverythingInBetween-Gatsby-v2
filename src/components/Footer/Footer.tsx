@@ -24,7 +24,7 @@ const Footer: React.FC<JSX.IntrinsicElements['footer']> = props => {
         </StyledLink>{' '}
         |{' '}
         <StyledLink
-          href="https://github.com/chancestrickland/chancethedev"
+          href="https://github.com/navarro-david/EverythingInBetween-Gatsby-v2"
           target="_blank"
           rel="noopener noreferrer"
         >

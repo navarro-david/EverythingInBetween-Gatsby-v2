@@ -1,13 +1,14 @@
 import {buzzsproutToken, buzzsproutPodID} from './keys';
 
+// TODO: Update SiteURL
 const siteUrl = 'https://chancethedev.com';
 
 module.exports = {
   siteMetadata: {
     title: 'Everything In Between',
     siteUrl,
-    description: `Two parts web development, one part exploration, add a dash of the unknown.`,
-    author: `@chancethedev`,
+    description: `A Christian podcast where we sit down with a variety of people to discuss stories, beliefs, theology, and everything in between. Our mission is to have a conversation with people that have varying opinions and beliefs, and maybe even shorten the distance between us. `,
+    author: `@navarro-david`,
   },
   plugins: [
     'gatsby-plugin-typescript',

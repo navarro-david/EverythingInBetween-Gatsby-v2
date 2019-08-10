@@ -14,3 +14,9 @@ Subscribe for season two on August 5th, 2019.
 Bay Area, CA. 
 
 Host Daniel Kunkel, Co-Host Jessica Senbetu, Producer Scott Bolin, Graphics done by Gabe Senbetu, Song done by Joel Adam Russell
+
+## About the Developer
+
+##### He's a 🤖
+
+Beep Boop

@@ -1,7 +1,7 @@
 {
-  "name": "chancethedev",
+  "name": "dnavdeej",
   "version": "1.0.0",
-  "author": "Chance Strickland <hi@chancethedev.com> (https://chancedigital.io/)",
+  "author": "David Navarro (https://www.dnavdeej.com/)",
   "scripts": {
     "dev": "gatsby develop",
     "build": "rm -rf .cache && gatsby build --prefix-links",
