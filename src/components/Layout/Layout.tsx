@@ -25,7 +25,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
           <SkipNavContent />
-          <main style={{ padding: `4rem 0` }}>{children}</main>
+          <main style={{ padding: `4rem 2rem` }}>{children}</main>
         </Container>
         <Footer />
       </ThemeProvider>
