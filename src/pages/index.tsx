@@ -12,6 +12,7 @@ import EpisodeList from '@components/EpisodeList';
 
 const StyledSectionHeader: any = styled.h1`
   border-bottom: 4px ${brand.primary} solid;
+  padding-bottom: .8rem;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
 `;
