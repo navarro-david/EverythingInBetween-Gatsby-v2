@@ -1,3 +1,6 @@
+![Alt text](./src/images/EverythingInBetween-Logo.svg)
+<img src="./src/images/EverythingInBetween-Logo.svg">
+
 # Everything In Between Podcast Website
 
 Website for my good friends at Everything in Between
