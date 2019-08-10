@@ -61,7 +61,7 @@ const SEO: React.FC<SEOProps> = ({
     { name: `twitter:description`, content: metaDescription },
     { name: 'twitter:image', content: image },
     { name: 'twitter:site', content: '@dnavdeej' },
-    { name: 'apple-itunes-app', content: 'app-id=1344502648' },
+    { name: 'apple-itunes-app', content: 'app-id=1347633418' },
   ];
 
   return (
