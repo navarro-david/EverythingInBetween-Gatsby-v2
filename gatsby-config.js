@@ -1,4 +1,5 @@
-import {buzzsproutToken, buzzsproutPodID} from './keys';
+// Place your own Buzzsrout Token and PodID in file called keys.js. Place keys.js in the root of the project.
+const keys = require('./keys.js');
 
 // TODO: Update SiteURL
 const siteUrl = 'https://chancethedev.com';
@@ -63,8 +64,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-buzzsprout',
       options: {
-        token: buzzsproutToken,
-        podcastId: buzzsproutPodID,
+        token: keys.buzzsproutToken,
+        podcastId: keys.buzzsproutPodID,
       },
     },
     {
