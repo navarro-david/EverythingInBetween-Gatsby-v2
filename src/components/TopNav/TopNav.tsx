@@ -5,6 +5,7 @@ import { TOP_NAV_MENU } from '@lib/constants';
 import { useMediaLayout, useTheme, useId } from '@lib/hooks';
 import { ThemeProps } from '@lib/types';
 import { StyledNav, StyledMenu } from './TopNav.styles';
+import { Link } from 'gatsby';
 
 // TODO: Implement some kind of focus management so that the user can tab back to the toggle button after they finish tabbing through the nav menu.
 
@@ -24,6 +25,7 @@ const TopNav: React.FC<TopNavProps> = ({ children, ...props }) => {
   const isSmall = useMediaLayout({ maxWidth: mediumScreen - 1 }, false);
   return (
     <React.Fragment>
+
       {isSmall ? (
         <MenuToggle
           menuActive={menuActive}
@@ -31,13 +33,13 @@ const TopNav: React.FC<TopNavProps> = ({ children, ...props }) => {
           navId={navId}
         />
       ) : null}
-      {/* <StyledNav {...props} menuActive={menuActive} id={navId}>
+      <StyledNav {...props} menuActive={menuActive} id={navId}>
         <StyledMenu
           items={MENU_ITEMS}
           togglable={isSmall}
           isActive={menuActive}
         />
-      </StyledNav> */}
+      </StyledNav>
     </React.Fragment>
   );
 };

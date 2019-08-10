@@ -51,7 +51,7 @@ export const StyledContentWrapper: any = styled.div`
 export const CoverImgContainer: any = styled.div`
   border-radius: 10px;
   overflow: hidden;
-  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.4));
+  // filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.4));
   /* ${bp('medium')} {
     perspective: 1000px;
     transform: scale(1.125);

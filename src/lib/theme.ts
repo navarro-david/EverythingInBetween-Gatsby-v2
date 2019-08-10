@@ -72,7 +72,7 @@ export const peach = '#f2ac5c';
 
 export const yellow = '#e3b91f';
 
-export const blue = '#146eff';
+export const purple = '#343a6e';
 
 export const fontSans = `'Poppins', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont,
     'Helvetica Neue', sans-serif`;
@@ -102,6 +102,8 @@ export const brand = {
   primaryDark: darken(0.2, peach),
   secondary: yellow,
   secondaryDark: darken(0.2, yellow),
+  accent: purple,
+  accentDark: darken(0.2, purple),
   white,
   black,
 };
