@@ -21,7 +21,7 @@ const SEO: React.FC<SEOProps> = ({
   description,
   lang = 'en',
   meta = [],
-  title = 'Chance the Developer Podcast',
+  title = 'Everything in Between Podcast',
   imageUrl,
 }) => {
   const { site } = useStaticQuery(
@@ -42,17 +42,17 @@ const SEO: React.FC<SEOProps> = ({
 
   const image =
     imageUrl ||
-    'https://res.cloudinary.com/chancedigital/image/upload/v1560399176/chancethedev.jpg';
+    'https://res.cloudinary.com/dnavdeej/image/upload/v1565468211/EIBart_djxrcj.jpg';
 
   const defaultMeta = [
-    { name: 'copyright', content: 'Chance Digital' },
+    { name: 'copyright', content: 'David Navarro' },
     { name: `description`, content: metaDescription },
     { name: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: `Chance the Developer Podcast` },
+    { property: 'og:site_name', content: `Everything In Between Podcast` },
     { property: `og:title`, content: title },
     { property: `og:description`, content: metaDescription },
     { property: `og:type`, content: `website` },
-    { property: 'og:url', content: 'https://chancedigital.io' },
+    { property: 'og:url', content: 'https://www.dnavdeej.com' },
     { property: 'og:image', content: image },
     { property: 'og:locale', content: `en_US` },
     { name: `twitter:title`, content: title },
@@ -60,7 +60,7 @@ const SEO: React.FC<SEOProps> = ({
     { name: `twitter:creator`, content: site.siteMetadata.author },
     { name: `twitter:description`, content: metaDescription },
     { name: 'twitter:image', content: image },
-    { name: 'twitter:site', content: '@chancethedev' },
+    { name: 'twitter:site', content: '@dnavdeej' },
     { name: 'apple-itunes-app', content: 'app-id=1344502648' },
   ];
 
