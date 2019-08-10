@@ -28,7 +28,7 @@ export const menuLinkStyles = (theme: ThemeProps) => css`
     transition: transform 0.2s ease-out, background 0.2s ease-out;
     transform-origin: left;
     transform: scaleX(0);
-    background: ${theme.brand.white};
+    background: ${theme.brand.accent};
   }
 
   &:hover,
@@ -49,7 +49,7 @@ export const menuLinkStyles = (theme: ThemeProps) => css`
   &:focus-within {
     &:after {
       transform: scaleX(1);
-      background: ${theme.brand.primary};
+      background: ${theme.brand.accent};
     }
   }
 

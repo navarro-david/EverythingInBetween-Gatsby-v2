@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: 'Everything In Between',
     siteUrl,
-    description: `A Christian podcast where we sit down with a variety of people to discuss stories, beliefs, theology, and everything in between. Our mission is to have a conversation with people that have varying opinions and beliefs, and maybe even shorten the distance between us. `,
+    description: `Everything in Between is a Christian podcast where we sit down with a variety of people to discuss stories, beliefs, theology, and everything in between. Our mission is to have a conversation with people that have varying opinions and beliefs, and maybe even shorten the distance between us. `,
     author: `@navarro-david`,
   },
   plugins: [

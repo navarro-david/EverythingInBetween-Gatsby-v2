@@ -26,7 +26,7 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   padding: calc(${styleVars.outerMargin} / 2) 2rem;
   background-color: ${brand.primary};
-  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+  // filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
   ${breakpoint('medium')} {
     padding: calc(${styleVars.outerMargin}) 2rem;
     
