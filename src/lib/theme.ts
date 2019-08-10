@@ -68,14 +68,13 @@ export const black = '#363636';
 
 export const white = '#ffffff';
 
-// export const hotPink = '#f64861';
 export const peach = '#f2ac5c';
 
 export const yellow = '#e3b91f';
 
 export const blue = '#146eff';
 
-export const fontSans = `'IBM Plex Sans', -apple-system, BlinkMacSystemFont,
+export const fontSans = `'Poppins', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont,
     'Helvetica Neue', sans-serif`;
 
 export const fontMono = `'IBM Plex Mono', 'Fira Sans', 'Droid Sans', monospace`;

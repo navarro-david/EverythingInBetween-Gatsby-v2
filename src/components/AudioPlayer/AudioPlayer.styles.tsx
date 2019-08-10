@@ -59,7 +59,12 @@ export const Container = styled.div`
   padding: 0.5rem;
   background: ${({ theme }) => theme.grays.s100};
   color: ${({ theme }) => getButton(theme).text};
-  border-radius: 3px;
+  border-radius: 5px;
+  // border-radius: 30px;
+  // border-top-right-radius: 30px;
+  // border-bottom-right-radius: 30px;
+
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1));
 
   input:focus {
     outline-offset: 5px;

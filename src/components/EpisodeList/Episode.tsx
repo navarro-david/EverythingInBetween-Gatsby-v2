@@ -41,7 +41,7 @@ const Episode: React.FC<EpisodeProps> = ({
       <StyledContentWrapper>
         <header>
           <StyledTitle>{modTitle}</StyledTitle>
-          <StyledSubtitle>Season {season_number} | Episode {episode_number}</StyledSubtitle>
+          <StyledSubtitle>S{season_number}  Episode {episode_number}</StyledSubtitle>
         </header>
         {summary ? <p>{summary}</p> : null}
         <StyledAudio
