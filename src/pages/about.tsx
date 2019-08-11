@@ -9,6 +9,7 @@ import { breakpoint } from '@lib/style';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import EpisodeList from '@components/EpisodeList';
+import { stripUnit } from 'polished';
 
 const StyledSectionHeader: any = styled.h1`
   border-bottom: 4px ${brand.primary} solid;
@@ -29,8 +30,16 @@ const StyledContainer: any = styled.div`
 const StyledImageContainer: any = styled.div`
   max-width: 300px;
   overflow: hidden;
-  border-radius: 150px;
+  // border-radius: 150px;
 `;
+
+const StyledCoverImageContainer: any = styled.div`
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 2rem auto;
+  margin-bottom: 8rem;
+`
 
 const StyledTeamMemberContainer: any = styled.div`
   margin: 3rem auto;
@@ -52,6 +61,7 @@ const StyledTeamMemberContainer: any = styled.div`
 
 const IndexPage: React.FC<{ data: any }> = ({
   data: {
+    eibCover: { childImageSharp: eibCoverImage },
     daniel: { childImageSharp: danielImage },
     scott: { childImageSharp: scottImage },
     senbetus: { childImageSharp: senbetusImage },
@@ -60,6 +70,9 @@ const IndexPage: React.FC<{ data: any }> = ({
   return (
     <Layout>
       <SEO title="About" />
+      <StyledCoverImageContainer>
+        <Img fluid={eibCoverImage.fluid} />
+      </StyledCoverImageContainer>
       <StyledSectionHeader>The Team</StyledSectionHeader>
       <StyledTeamMemberContainer>
         <StyledImageContainer>
@@ -89,6 +102,15 @@ const IndexPage: React.FC<{ data: any }> = ({
 
 export const query = graphql`
   query AboutPageQuery {
+    eibCover: file(relativePath: { eq: "eib-cover.jpg" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 400
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     daniel: file(relativePath: { eq: "team/daniel.jpg" }) {
       childImageSharp {
         fluid(
