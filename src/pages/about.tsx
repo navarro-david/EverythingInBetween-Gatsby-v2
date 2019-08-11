@@ -3,11 +3,11 @@ import { graphql } from 'gatsby';
 // import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { brand } from '@lib/theme';
+import { breakpoint } from '@lib/style';
 
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import EpisodeList from '@components/EpisodeList';
-import { breakpoint } from '@lib/style';
 
 const StyledSectionHeader: any = styled.h1`
   border-bottom: 4px ${brand.primary} solid;
