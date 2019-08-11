@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 // import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { brand } from '@lib/theme';
@@ -11,7 +12,7 @@ import EpisodeList from '@components/EpisodeList';
 
 const StyledSectionHeader: any = styled.h1`
   border-bottom: 4px ${brand.primary} solid;
-  padding-bottom: .8rem;
+  padding-bottom: 0.8rem;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
 `;
@@ -26,26 +27,99 @@ const StyledContainer: any = styled.div`
 `;
 
 const StyledImageContainer: any = styled.div`
-  margin: 0 -4rem;
-  margin-top: -4rem;
-  margin-bottom: 2rem;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 150px;
 `;
 
-const IndexPage: React.FC = () => {
+const StyledTeamMemberContainer: any = styled.div`
+  margin: 3rem auto;
+  max-width: 332px;
+  overflow: hidden;
+  border: ${brand.primary} 4px solid;
+  padding: 16px;
+  h2 {
+    margin: 0;
+    margin-top: 1.5rem;
+    color: ${brand.primary};
+    text-align: middle;
+  }
+  h3 {
+    margin: 0;
+    text-align: middle;
+  }
+`;
+
+const IndexPage: React.FC<{ data: any }> = ({
+  data: {
+    daniel: { childImageSharp: danielImage },
+    scott: { childImageSharp: scottImage },
+    senbetus: { childImageSharp: senbetusImage },
+  },
+}) => {
   return (
     <Layout>
       <SEO title="About" />
-      <StyledSectionHeader>About</StyledSectionHeader>
-      <StyledContainer>
-        01001101 01100001 01111001 00100000 01001001 00100000 01101000 01100001
-        01110110 01100101 00100000 01100001 01101110 00100000 01100001 01101100
-        01101101 01101111 01101110 01100100 00100000 01101101 01101001 01101100
-        01101011 00100000 01100110 01101100 01100001 01110100 00100000 01110111
-        01101000 01101001 01110100 01100101 00101100 00100000 01110000 01101100
-        01100101 01100001 01110011 01100101 00111111 🤖☕ (Beep Boop)
-      </StyledContainer>
+      <StyledSectionHeader>The Team</StyledSectionHeader>
+      <StyledTeamMemberContainer>
+        <StyledImageContainer>
+          <Img fluid={danielImage.fluid} />
+        </StyledImageContainer>
+        <h2>Daniel Kunel</h2>
+        <h3>Creator & Host</h3>
+      </StyledTeamMemberContainer>
+      <StyledTeamMemberContainer>
+        <StyledImageContainer>
+          <Img fluid={senbetusImage.fluid} />
+        </StyledImageContainer>
+        <h2>Gabe and Jess Senbetu</h2>
+        <h3>Graphics Designer</h3>
+        <h3>Co-Host</h3>
+      </StyledTeamMemberContainer>
+      <StyledTeamMemberContainer>
+        <StyledImageContainer>
+          <Img fluid={scottImage.fluid} />
+        </StyledImageContainer>
+        <h2>Scott Bolin</h2>
+        <h3>Co-Creator & Editor/Producer</h3>
+      </StyledTeamMemberContainer>
     </Layout>
   );
 };
+
+export const query = graphql`
+  query AboutPageQuery {
+    daniel: file(relativePath: { eq: "team/daniel.jpg" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 400
+          duotone: { highlight: "e08187", shadow: "#343a6e" }
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    scott: file(relativePath: { eq: "team/scott.jpg" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 400
+          duotone: { highlight: "e08187", shadow: "#343a6e" }
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    senbetus: file(relativePath: { eq: "team/senbetus.jpg" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 400
+          duotone: { highlight: "e08187", shadow: "#343a6e" }
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
