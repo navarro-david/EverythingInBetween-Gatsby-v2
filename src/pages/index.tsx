@@ -32,17 +32,39 @@ const StyledImageContainer: any = styled.div`
   margin-bottom: 2rem;
 `;
 
+const StyledCoverImageContainer: any = styled.div`
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 8px;
+
+  border-radius: 20px;
+  border: ${brand.primary} 3px solid;
+
+  > * {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+`
+
 const IndexPage: React.FC<{ data: any }> = ({
   data: {
     allBuzzsproutPodcastEpisode: { edges: episodes },
     site: { siteMetadata: siteMetadata },
-    file: { childImageSharp: childImageSharp },
+    eibCover: { childImageSharp: eibCoverImage },
   },
 }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <StyledImageContainer>
+      <StyledCoverImageContainer>
+        <Img fluid={eibCoverImage.fluid} />
+      </StyledCoverImageContainer>
+      <StyledContainer>
+        <strong>{siteMetadata.description}</strong>
+      </StyledContainer>
+      <StyledSectionHeader>Listen</StyledSectionHeader>
+      <EpisodeList episodes={episodes} />
+      {/* <StyledImageContainer>
         <Img fluid={childImageSharp.fluid} />
       </StyledImageContainer>
       <StyledSectionHeader>The Great Adventure</StyledSectionHeader>
@@ -50,14 +72,19 @@ const IndexPage: React.FC<{ data: any }> = ({
         <p>{siteMetadata.description}</p>
       </StyledContainer>
       <StyledSectionHeader>Recent Episodes</StyledSectionHeader>
-      <EpisodeList maxEpisodes={3} episodes={episodes} />
+      <EpisodeList maxEpisodes={3} episodes={episodes} /> */}
     </Layout>
   );
 };
 
 export const query = graphql`
   query HomePageQuery {
-    allBuzzsproutPodcastEpisode {
+    allBuzzsproutPodcastEpisode(
+      sort: {
+        fields: [season_number, episode_number]
+        order: [DESC, DESC]
+      }
+    ) {
       edges {
         node {
           id
@@ -76,9 +103,11 @@ export const query = graphql`
         description
       }
     }
-    file(relativePath: { eq: "cover-home.jpg" }) {
+    eibCover: file(relativePath: { eq: "eib-cover.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1900) {
+        fluid(
+          maxWidth: 400
+        ) {
           ...GatsbyImageSharpFluid
         }
       }
