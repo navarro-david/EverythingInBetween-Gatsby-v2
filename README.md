@@ -6,6 +6,8 @@ Website for my good friends at Everything in Between
 
 Bootstrapped from [ChanceTheDev](https://chancethedev.com). Built with React, Gatsby, Emotion, TypeScript and this [Buzzsrout Gatsby Plugin](https://www.gatsbyjs.org/packages/gatsby-source-buzzsprout/)
 
+**Note:** This repository is no longer maintained. This is just a public version of the site's repository.
+
 ## About the Podcast
 
 A Christian podcast where we sit down with a variety of people to discuss stories, beliefs, theology, and everything in between. Our mission is to have a conversation with people that have varying opinions and beliefs, and maybe even shorten the distance between us. 
