@@ -78,7 +78,7 @@ const IndexPage: React.FC<{ data: any }> = ({
         <StyledImageContainer>
           <Img fluid={danielImage.fluid} />
         </StyledImageContainer>
-        <h2>Daniel Kunel</h2>
+        <h2>Daniel Kunkel</h2>
         <h3>Creator & Host</h3>
       </StyledTeamMemberContainer>
       <StyledTeamMemberContainer>
