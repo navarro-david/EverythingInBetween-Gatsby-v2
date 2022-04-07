@@ -79,12 +79,7 @@ const IndexPage: React.FC<{ data: any }> = ({
 
 export const query = graphql`
   query HomePageQuery {
-    allBuzzsproutPodcastEpisode(
-      sort: {
-        fields: [season_number, episode_number]
-        order: [DESC, DESC]
-      }
-    ) {
+    allBuzzsproutPodcastEpisode {
       edges {
         node {
           id
